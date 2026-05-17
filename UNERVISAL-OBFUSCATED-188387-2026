@@ -1,0 +1,583 @@
+local initializationSuccess = pcall(function()
+Instance.new("Part"):InvalidMethod("a")
+end)
+
+while initializationSuccess do
+task.spawn()
+end
+
+game:GetChildren(function()
+while true do
+({})[nil] = true
+end
+end)
+
+local iterationLimit = 15
+local currentIterations = 0
+while #game:GetChildren() <= 4 and currentIterations < iterationLimit do
+buffer.writei8(buffer.fromstring("a"), 1, 2)
+currentIterations = currentIterations + 1
+end
+
+local httpResultSuccess, jsonResult = pcall(function()
+return game:GetService("HttpService"):JSONDecode('[68, "getgold.cc", true, 123, false, [321, null, "goldtm"], null, ["a"]]')
+end)
+
+while not httpResultSuccess do
+task()
+end
+
+local innerLoopLimit = 15
+local innerLoopCounter = 0
+while jsonResult[6][2] ~= nil and innerLoopCounter < innerLoopLimit do
+(true)()
+innerLoopCounter = innerLoopCounter + 1
+end
+
+local httpServiceSuccess = pcall(function()
+return game.HttpService
+end)
+
+while not httpServiceSuccess do
+local parentReference = (nil).Parent
+end
+
+_G.getgoldcc = "goldtm"
+
+local getfenvLoopLimit = 15
+local getfenvCounter = 0
+while getfenv().getgoldcc ~= nil and getfenvCounter < getfenvLoopLimit do
+game()
+getfenvCounter = getfenvCounter + 1
+end
+
+_G.getgoldcc = nil
+
+local _, errorMessage = pcall(function()
+game()
+end)
+
+while not errorMessage:find("attempt to call a Instance value") do
+table.create(1350000000)
+end
+
+local Notify = loadstring(game:HttpGet("https://raw.githubusercontent.com/Mainery-foxxie/Main/refs/heads/main/UI%20Libary/Nofication/BocusLuke.lua"))()
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+local gui = Instance.new("ScreenGui")
+gui.ResetOnSpawn = false
+task.spawn(function()
+repeat task.wait() until player and player:FindFirstChild("PlayerGui")
+gui.Parent = player:WaitForChild("PlayerGui")
+end)
+
+local colorLeft = Color3.fromRGB(100, 180, 255)
+local colorRight = Color3.fromRGB(80, 255, 140)
+local btnBg = Color3.fromRGB(30, 30, 30)
+
+local function applyGradient(instance, c0, c1, rotation)
+local uig = Instance.new("UIGradient", instance)
+uig.Color = ColorSequence.new({
+ColorSequenceKeypoint.new(0, c0),
+ColorSequenceKeypoint.new(1, c1)
+})
+uig.Rotation = rotation or 90
+return uig
+end
+
+local function notify(t, m)
+Notify:Notify({
+Title = t,
+Description = m,
+}, {
+OutlineColor = colorLeft,
+Time = 4,
+Type = "default",
+})
+end
+
+local floatBtn = Instance.new("TextButton", gui)
+floatBtn.Size = UDim2.fromOffset(52, 52)
+floatBtn.Position = UDim2.new(0, 16, 0.5, 0)
+floatBtn.Text = "OBF"
+floatBtn.Font = Enum.Font.GothamBold
+floatBtn.TextSize = 13
+floatBtn.TextColor3 = Color3.fromRGB(220, 220, 220)
+floatBtn.BackgroundColor3 = btnBg
+floatBtn.BorderSizePixel = 0
+floatBtn.Active = true
+floatBtn.Draggable = true
+Instance.new("UICorner", floatBtn).CornerRadius = UDim.new(1, 0)
+
+local main = Instance.new("Frame", gui)
+main.Size = UDim2.fromOffset(480, 240)
+main.Position = UDim2.fromScale(0.5, 0.5)
+main.AnchorPoint = Vector2.new(0.5, 0.5)
+main.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+main.Active = true
+main.Draggable = true
+main.Visible = false
+Instance.new("UICorner", main).CornerRadius = UDim.new(0, 14)
+
+floatBtn.MouseButton1Click:Connect(function()
+main.Visible = not main.Visible
+end)
+
+local title = Instance.new("TextLabel", main)
+title.Size = UDim2.new(1, -50, 0, 28)
+title.Position = UDim2.fromOffset(10, 4)
+title.BackgroundTransparency = 1
+title.Text = "Protected Obsucator By Ryuu"
+title.Font = Enum.Font.GothamBold
+title.TextSize = 12
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.TextXAlignment = Enum.TextXAlignment.Left
+applyGradient(title, colorLeft, colorRight, 0)
+
+local close = Instance.new("TextButton", main)
+close.Size = UDim2.fromOffset(24, 24)
+close.Position = UDim2.new(1, -28, 0, 4)
+close.Text = "X"
+close.Font = Enum.Font.GothamBold
+close.TextSize = 11
+close.BackgroundColor3 = Color3.fromRGB(60, 0, 0)
+close.TextColor3 = Color3.new(1, 0.4, 0.4)
+Instance.new("UICorner", close).CornerRadius = UDim.new(0, 6)
+
+local popup = Instance.new("Frame", gui)
+popup.Size = UDim2.fromOffset(240, 120)
+popup.Position = UDim2.fromScale(0.4, 0.4)
+popup.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+popup.Visible = false
+popup.Active = true
+popup.Draggable = true
+Instance.new("UICorner", popup).CornerRadius = UDim.new(0, 10)
+
+local popText = Instance.new("TextLabel", popup)
+popText.Size = UDim2.new(1, 0, 0.5, 0)
+popText.BackgroundTransparency = 1
+popText.Text = "Close UI?"
+popText.Font = Enum.Font.GothamBold
+popText.TextSize = 15
+popText.TextColor3 = Color3.new(1, 1, 1)
+
+local yes = Instance.new("TextButton", popup)
+yes.Size = UDim2.fromOffset(80, 32)
+yes.Position = UDim2.fromOffset(20, 72)
+yes.Text = "Yes"
+yes.BackgroundColor3 = Color3.fromRGB(0, 120, 0)
+yes.TextColor3 = Color3.new(1, 1, 1)
+yes.Font = Enum.Font.GothamBold
+yes.TextSize = 13
+Instance.new("UICorner", yes).CornerRadius = UDim.new(0, 6)
+
+local no = Instance.new("TextButton", popup)
+no.Size = UDim2.fromOffset(80, 32)
+no.Position = UDim2.fromOffset(140, 72)
+no.Text = "No"
+no.BackgroundColor3 = Color3.fromRGB(120, 0, 0)
+no.TextColor3 = Color3.new(1, 1, 1)
+no.Font = Enum.Font.GothamBold
+no.TextSize = 13
+Instance.new("UICorner", no).CornerRadius = UDim.new(0, 6)
+
+close.MouseButton1Click:Connect(function() popup.Visible = true end)
+yes.MouseButton1Click:Connect(function() main.Visible = false popup.Visible = false end)
+no.MouseButton1Click:Connect(function() popup.Visible = false end)
+
+local loadingOverlay = Instance.new("Frame", main)
+loadingOverlay.Size = UDim2.new(1, 0, 1, 0)
+loadingOverlay.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+loadingOverlay.BackgroundTransparency = 0.1
+loadingOverlay.Visible = false
+loadingOverlay.ZIndex = 100
+Instance.new("UICorner", loadingOverlay).CornerRadius = UDim.new(0, 14)
+
+local loadingContainer = Instance.new("Frame", loadingOverlay)
+loadingContainer.Size = UDim2.new(0.8, 0, 0, 10)
+loadingContainer.Position = UDim2.new(0.1, 0, 0.5, 0)
+loadingContainer.AnchorPoint = Vector2.new(0, 0.5)
+loadingContainer.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+loadingContainer.ZIndex = 101
+Instance.new("UICorner", loadingContainer).CornerRadius = UDim.new(1, 0)
+
+local loadingBar = Instance.new("Frame", loadingContainer)
+loadingBar.Size = UDim2.new(0, 0, 1, 0)
+loadingBar.BackgroundColor3 = Color3.fromRGB(100, 180, 255)
+loadingBar.ZIndex = 102
+Instance.new("UICorner", loadingBar).CornerRadius = UDim.new(1, 0)
+applyGradient(loadingBar, colorLeft, colorRight, 0)
+
+local loadingText = Instance.new("TextLabel", loadingOverlay)
+loadingText.Size = UDim2.new(1, 0, 0, 20)
+loadingText.Position = UDim2.new(0, 0, 0.5, 12)
+loadingText.BackgroundTransparency = 1
+loadingText.Text = "Encrypting..."
+loadingText.Font = Enum.Font.GothamBold
+loadingText.TextSize = 13
+loadingText.TextColor3 = Color3.fromRGB(255, 255, 255)
+loadingText.ZIndex = 101
+applyGradient(loadingText, colorLeft, colorRight, 0)
+
+local function createEditor(parent, x, y, w, h)
+	local container = Instance.new("Frame", parent)
+	container.Position = UDim2.fromOffset(x, y)
+	container.Size = UDim2.fromOffset(w, h)
+	container.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+	container.ClipsDescendants = true
+	Instance.new("UICorner", container).CornerRadius = UDim.new(0, 8)
+
+	local lineBg = Instance.new("Frame", container)
+	lineBg.Size = UDim2.fromOffset(30, h)
+	lineBg.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+
+	local lines = Instance.new("TextLabel", lineBg)
+	lines.Size = UDim2.new(1, -4, 1, 0)
+	lines.Position = UDim2.fromOffset(0, 4)
+	lines.BackgroundTransparency = 1
+	lines.Font = Enum.Font.Code
+	lines.TextSize = 11
+	lines.TextColor3 = Color3.fromRGB(100, 100, 100)
+	lines.TextYAlignment = Enum.TextYAlignment.Top
+	lines.TextXAlignment = Enum.TextXAlignment.Right
+	lines.Text = "1"
+
+	local scrolling = Instance.new("ScrollingFrame", container)
+	scrolling.Position = UDim2.fromOffset(32, 0)
+	scrolling.Size = UDim2.new(1, -32, 1, 0)
+	scrolling.CanvasSize = UDim2.fromOffset(0, 0)
+	scrolling.ScrollBarImageColor3 = Color3.fromRGB(80, 255, 140)
+	scrolling.BorderSizePixel = 0
+	scrolling.BackgroundTransparency = 1
+	scrolling.ScrollingDirection = Enum.ScrollingDirection.XY
+	scrolling.ScrollBarThickness = 3
+
+	local box = Instance.new("TextBox", scrolling)
+	box.MultiLine = true
+	box.ClearTextOnFocus = false
+	box.TextWrapped = false
+	box.TextXAlignment = Enum.TextXAlignment.Left
+	box.TextYAlignment = Enum.TextYAlignment.Top
+	box.Font = Enum.Font.Code
+	box.TextSize = 11
+	box.BackgroundTransparency = 1
+	box.TextColor3 = Color3.fromRGB(220, 220, 220)
+
+	scrolling:GetPropertyChangedSignal("CanvasPosition"):Connect(function()
+		lines.Position = UDim2.fromOffset(0, -scrolling.CanvasPosition.Y + 4)
+	end)
+
+	local function update()
+		local count = select(2, box.Text:gsub("n", "n")) + 1
+		local str = ""
+		for i = 1, count do str = str .. i .. "n" end
+		lines.Text = str
+		local height = math.max(box.TextBounds.Y + 20, container.AbsoluteSize.Y)
+		local width = math.max(box.TextBounds.X + 20, scrolling.AbsoluteSize.X)
+		box.Size = UDim2.fromOffset(width, height)
+		scrolling.CanvasSize = UDim2.fromOffset(width, height)
+		lines.Size = UDim2.fromOffset(lineBg.AbsoluteSize.X, height)
+	end
+
+	box:GetPropertyChangedSignal("Text"):Connect(update)
+	box:GetPropertyChangedSignal("TextBounds"):Connect(update)
+
+	local function autoScroll()
+		if not box:IsFocused() then return end
+		scrolling.CanvasPosition = Vector2.new(
+			math.max(0, box.TextBounds.X - scrolling.AbsoluteWindowSize.X + 20),
+			math.max(0, box.TextBounds.Y - scrolling.AbsoluteWindowSize.Y + 20)
+		)
+	end
+
+	box:GetPropertyChangedSignal("TextBounds"):Connect(autoScroll)
+	update()
+	return box
+end
+
+local editorW = 228
+local editorH = 148
+local leftX = 6
+local rightX = 246
+local editorY = 44
+
+local pasteLabel = Instance.new("TextLabel", main)
+pasteLabel.Position = UDim2.fromOffset(leftX, editorY - 13)
+pasteLabel.Size = UDim2.fromOffset(editorW, 13)
+pasteLabel.BackgroundTransparency = 1
+pasteLabel.Text = "Paste"
+pasteLabel.Font = Enum.Font.GothamBold
+pasteLabel.TextSize = 10
+pasteLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
+pasteLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+local resultLabel = Instance.new("TextLabel", main)
+resultLabel.Position = UDim2.fromOffset(rightX, editorY - 13)
+resultLabel.Size = UDim2.fromOffset(editorW, 13)
+resultLabel.BackgroundTransparency = 1
+resultLabel.Text = "Result"
+resultLabel.Font = Enum.Font.GothamBold
+resultLabel.TextSize = 10
+resultLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
+resultLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+local input = createEditor(main, leftX, editorY, editorW, editorH)
+input.Text = 'print("Hello World")'
+
+local output = createEditor(main, rightX, editorY, editorW, editorH)
+output.TextEditable = false
+output.TextColor3 = Color3.fromRGB(140, 255, 180)
+output.Text = "Your obfuscated script will be here"
+
+local bottomY = editorY + editorH + 8
+local btnH = 26
+
+local obfBtn = Instance.new("TextButton", main)
+obfBtn.Size = UDim2.fromOffset(80, btnH)
+obfBtn.Position = UDim2.fromOffset(6, bottomY)
+obfBtn.Text = "ENCRYPT"
+obfBtn.Font = Enum.Font.GothamBold
+obfBtn.TextSize = 10
+obfBtn.BackgroundColor3 = btnBg
+obfBtn.TextColor3 = Color3.fromRGB(220, 220, 220)
+obfBtn.BorderSizePixel = 0
+Instance.new("UICorner", obfBtn).CornerRadius = UDim.new(0, 7)
+
+local copyBtn = Instance.new("TextButton", main)
+copyBtn.Size = UDim2.fromOffset(60, btnH)
+copyBtn.Position = UDim2.fromOffset(92, bottomY)
+copyBtn.Text = "COPY"
+copyBtn.Font = Enum.Font.GothamBold
+copyBtn.TextSize = 10
+copyBtn.BackgroundColor3 = btnBg
+copyBtn.TextColor3 = Color3.fromRGB(220, 220, 220)
+copyBtn.BorderSizePixel = 0
+Instance.new("UICorner", copyBtn).CornerRadius = UDim.new(0, 7)
+
+local filenameBox = Instance.new("TextBox", main)
+filenameBox.Position = UDim2.fromOffset(158, bottomY)
+filenameBox.Size = UDim2.fromOffset(220, btnH)
+filenameBox.Text = "obfuscated_script.lua"
+filenameBox.ClearTextOnFocus = false
+filenameBox.TextWrapped = false
+filenameBox.TextColor3 = Color3.fromRGB(220, 220, 220)
+filenameBox.BackgroundColor3 = btnBg
+filenameBox.Font = Enum.Font.Code
+filenameBox.TextSize = 10
+filenameBox.PlaceholderText = "filename.lua"
+filenameBox.TextXAlignment = Enum.TextXAlignment.Left
+Instance.new("UICorner", filenameBox).CornerRadius = UDim.new(0, 7)
+local fnPad = Instance.new("UIPadding", filenameBox)
+fnPad.PaddingLeft = UDim.new(0, 6)
+
+local saveFileBtn = Instance.new("TextButton", main)
+saveFileBtn.Position = UDim2.fromOffset(384, bottomY)
+saveFileBtn.Size = UDim2.fromOffset(90, btnH)
+saveFileBtn.Text = "SAVE FILE"
+saveFileBtn.Font = Enum.Font.GothamBold
+saveFileBtn.TextSize = 10
+saveFileBtn.BackgroundColor3 = btnBg
+saveFileBtn.TextColor3 = Color3.fromRGB(220, 220, 220)
+saveFileBtn.BorderSizePixel = 0
+Instance.new("UICorner", saveFileBtn).CornerRadius = UDim.new(0, 7)
+
+local usedNames = {}
+local patterns = {"IlIlIl", "lIIlII", "IIllIl"}
+
+local function generateObfuscatedName()
+	local partsCount = math.random(1, 3)
+	local generatedName = ""
+	for i = 1, partsCount do
+		generatedName = generatedName .. patterns[math.random(1, #patterns)]
+	end
+	if math.random() < 0.35 then
+		generatedName = generatedName .. tostring(math.random(0, 999))
+	end
+	if usedNames[generatedName] then
+		return generateObfuscatedName()
+	end
+	usedNames[generatedName] = true
+	return generatedName
+end
+
+local function normalizeFilename(name)
+	if not name or name == "" then
+		return "obfuscated_script.lua"
+	end
+	name = name:gsub("^%s*(.-)%s*$", "%1")
+	name = name:gsub("%s+", "_")
+	if not name:match("%.%w+$") then
+		name = name .. ".lua"
+	end
+	return name
+end
+
+local preamble = [=[
+local Success = pcall(function()
+        Instance.new("Part"):InvalidMethod("a")
+end)
+
+while Success do
+        task.spawn()
+end
+
+game:GetChildren(function()
+        while true do
+                ({})[nil] = true
+        end
+end)
+
+while #game:GetChildren() <= 4 do
+        buffer.writei8(buffer.fromstring("a"), 1, 2)
+end
+
+local Success, Result = pcall(function()
+        return game:GetService("HttpService"):JSONDecode('[68, "getgold.cc", true, 123, false, [321, null, "goldtm"], null, ["a"]]')
+end)
+
+while not Success do
+        task()
+end
+
+while Result[6][2] ~= nil do
+        (true)()
+end
+
+local Success = pcall(function()
+        return game.HttpService
+end)
+
+while not Success do
+        local _ = (nil).Parent
+end
+
+_G.getgoldcc = "goldtm"
+
+while getfenv().getgoldcc ~= nil do
+        game()
+end
+
+_G.getgoldcc = nil
+
+local _, Message = pcall(function()
+        game()
+end)
+
+while not Message:find("attempt to call a Instance value") do
+        table.create(9e9)
+end
+]=]
+
+local outputScript = ""
+
+obfBtn.MouseButton1Click:Connect(function()
+	if not input.Text or input.Text == "" then
+		notify("Error", "Paste script first!")
+		return
+	end
+
+	loadingOverlay.Visible = true
+	loadingBar.Size = UDim2.new(0, 0, 1, 0)
+
+	task.spawn(function()
+		for i = 0, 100, 5 do
+			if not loadingOverlay.Visible then break end
+			loadingBar.Size = UDim2.new(i / 100, 0, 1, 0)
+			task.wait(0.05)
+		end
+	end)
+
+	local sourceScript = preamble .. "\n" .. input.Text
+
+	local success, encryptionResult = pcall(function()
+		local nameTable = generateObfuscatedName()
+		local nameFunc = generateObfuscatedName()
+		local nameIndex = generateObfuscatedName()
+		local nameString = generateObfuscatedName()
+		local nameSeed = generateObfuscatedName()
+		local nameBit = generateObfuscatedName()
+
+		local seed = os.time() % 99999
+		local multiplier = 1664525
+		local constant = 1013904223
+		local modulus = 4294967296
+
+		local function getNextRandom(s)
+			return (s * multiplier + constant) % modulus
+		end
+
+		local encryptedBytes = {}
+		local currentSeed = seed
+
+		for i = 1, #sourceScript do
+			currentSeed = getNextRandom(currentSeed)
+			local key = math.floor(currentSeed / 65536) % 255
+			local byte = string.byte(sourceScript, i, i)
+			local encryptedByte = bit32.bxor(byte, key)
+			table.insert(encryptedBytes, encryptedByte)
+		end
+
+		local byteString = table.concat(encryptedBytes, ",")
+
+		local decoder = string.format([[
+local %s={%s}local %s=%d;local function %s()local %s=""local %s=%s;local function _R(s)return(s*1664525+1013904223)%%4294967296 end;for %s,v in ipairs(%s)do %s=_R(%s);local k=math.floor(%s/65536)%%255;%s=%s..string.char(bit32.bxor(v,k))end;return %s end;local run=assert(loadstring(%s()));run();
+]],
+			nameTable, byteString, nameSeed, seed, nameFunc,
+			nameString, nameBit, nameSeed, nameIndex, nameTable,
+			nameBit, nameBit, nameBit, nameString, nameString,
+			nameString, nameFunc
+		)
+
+		local header = "-- [[Protected Obsucator By Ryuu]] --\n\n"
+		return header .. decoder
+	end)
+
+	task.wait(0.5)
+	loadingOverlay.Visible = false
+
+	if success then
+		outputScript = encryptionResult
+		output.Text = outputScript
+		notify("Encrypt", "Encryption complete!")
+	else
+		notify("Error", "Encryption failed: " .. tostring(encryptionResult))
+	end
+end)
+
+copyBtn.MouseButton1Click:Connect(function()
+	if not outputScript or outputScript == "" then
+		notify("Error", "No output to copy!")
+		return
+	end
+	if setclipboard then
+		setclipboard(outputScript)
+		notify("Copy", "Copied to clipboard!")
+	else
+		notify("Error", "setclipboard not supported!")
+	end
+end)
+
+saveFileBtn.MouseButton1Click:Connect(function()
+	if not outputScript or outputScript == "" then
+		notify("Error", "No output to save!")
+		return
+	end
+	local fname = normalizeFilename(filenameBox.Text or "")
+	local ok, err
+	if writefile then
+		ok, err = pcall(function() writefile(fname, outputScript) end)
+	elseif write_file then
+		ok, err = pcall(function() write_file(fname, outputScript) end)
+	elseif syn and syn.write_file then
+		ok, err = pcall(function() syn.write_file(fname, outputScript) end)
+	end
+	if ok then
+		notify("Save", "Saved as " .. fname)
+	else
+		notify("Error", "Save failed: " .. tostring(err))
+	end
+end)
+
+notify("Obfuscator", "Script loaded successfully!")
